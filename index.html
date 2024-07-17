@@ -6,7 +6,30 @@
     <title>JING</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="root">
+      <div>
+        <button onclick="open_img()">open image</button>
+      </div>
+      <main>
+        <h3>Source</h3>
+        <img id="source">
+        <div id="raw-size"></div>
+        <div>
+          <label>
+            <span>width</span>
+            <input name="width" type="number">
+          </label>
+          <label>
+            <span>height</span>
+            <input name="height" type="number">
+          </label>
+          <button onclick="preview()">preview</button>
+          <button onclick="cut()">cut</button>
+        </div>
+        <h3>Preview</h3>
+        <img id="preview">
+      </main>
+    </div>
     <script type="module" src="./src/demo/main.ts"></script>
   </body>
 </html>
