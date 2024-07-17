@@ -1,4 +1,4 @@
-import { badep } from './badep'
+import { badep } from 'badep'
 
 interface Props {
   img: HTMLImageElement // url 和 File 都会导致异步（img.onload）
