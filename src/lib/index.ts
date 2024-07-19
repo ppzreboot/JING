@@ -1,11 +1,15 @@
 import { badep } from 'badep'
 
 interface Props {
+  /** 目标图片 */
   img: HTMLImageElement // url 和 File 都会导致异步（img.onload）
+  /** 处理后的宽度 */
   width?: number
+  /** 处理后的高度 */
   height?: number
 }
 
+/** 抽出图片多余的像素 */
 export
 function resize_img(props: Props) {
   props.width ??= props.img.width
@@ -33,6 +37,8 @@ function to_img(canvas: HTMLCanvasElement) {
   img.src = canvas.toDataURL()
   return img
 }
+
+/** 把 canvas 转成 data url，再下载到本地 */
 export
 function download_png(canvas: HTMLCanvasElement) {
   const a = document.createElement('a')
@@ -41,6 +47,7 @@ function download_png(canvas: HTMLCanvasElement) {
   a.click()
 }
 
+/** 抽像素的底层方法 */
 export
 function resize_img_data(img_data: ImageData, width: number, height: number) {
   if (!width || !height)

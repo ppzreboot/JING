@@ -1,4 +1,4 @@
-import { resize_img, download_png } from '../lib'
+import { resize_img, download_png } from '../../dist/index'
 import './global.css'
 
 declare global {

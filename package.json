@@ -1,12 +1,13 @@
 {
-  "name": "jing",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@czuo/jing",
+  "version": "0.0.1",
   "type": "module",
+  "files": ["dist"],
+  "main": "dist/index.js",
   "scripts": {
     "dev": "vite",
     "test": "vitest",
-    "build": "tsc && vite build",
+    "build": "tsc && vite --config build/vite.config.js build && node build/type.js",
     "preview": "vite preview"
   },
   "devDependencies": {
