@@ -1,4 +1,4 @@
-import { resize_img, download_png } from '../../dist/index'
+import { resize_img, download_png } from '@czuo/jing'
 import './global.css'
 
 declare global {

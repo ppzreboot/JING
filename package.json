@@ -2,7 +2,9 @@
   "name": "@czuo/jing",
   "version": "0.0.1",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "scripts": {
     "dev": "vite",
@@ -11,6 +13,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@czuo/jing": "^0.0.1",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vitest": "^2.0.3"
